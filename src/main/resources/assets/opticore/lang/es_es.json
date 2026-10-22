@@ -1,4 +1,9 @@
 {
   "key.opticore.cycle_fps": "Cambiar límite de FPS",
-  "category.opticore.controls": "OptiCore"
+  "category.opticore.controls": "OptiCore",
+  "message.opticore.fps_limit_changed": "OptiCore: límite de FPS establecido en %s",
+  "fps.opticore.preset.60": "60 FPS",
+  "fps.opticore.preset.120": "120 FPS",
+  "fps.opticore.preset.144": "144 FPS",
+  "fps.opticore.preset.unlimited": "Ilimitados"
 }

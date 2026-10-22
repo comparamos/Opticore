@@ -9,8 +9,13 @@ import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
 
 public final class OptiCoreClient implements ClientModInitializer {
-    private static final int[] FPS_LIMITS = {60, 120, 144, 260};
-    private static final String[] LABELS = {"60 FPS", "120 FPS", "144 FPS", "Ilimitados"};
+    private static final int UNLIMITED_FRAMERATE = 260;
+    private static final FpsPreset[] FPS_PRESETS = {
+            new FpsPreset(60, "fps.opticore.preset.60"),
+            new FpsPreset(120, "fps.opticore.preset.120"),
+            new FpsPreset(144, "fps.opticore.preset.144"),
+            new FpsPreset(UNLIMITED_FRAMERATE, "fps.opticore.preset.unlimited")
+    };
     private int currentPreset = 0;
     private KeyBinding cycleFpsKey;
 
@@ -25,17 +30,24 @@ public final class OptiCoreClient implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (cycleFpsKey.wasPressed()) {
-                currentPreset = (currentPreset + 1) % FPS_LIMITS.length;
-                client.options.getMaxFps().setValue(FPS_LIMITS[currentPreset]);
+                currentPreset = (currentPreset + 1) % FPS_PRESETS.length;
+                FpsPreset preset = FPS_PRESETS[currentPreset];
+                client.options.getMaxFps().setValue(preset.limit());
                 client.options.write();
 
                 if (client.player != null) {
                     client.player.sendMessage(
-                            Text.literal("OptiCore: límite de FPS " + LABELS[currentPreset]),
+                            Text.translatable(
+                                    "message.opticore.fps_limit_changed",
+                                    Text.translatable(preset.translationKey())
+                            ),
                             true
                     );
                 }
             }
         });
+    }
+
+    private record FpsPreset(int limit, String translationKey) {
     }
 }

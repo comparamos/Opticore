@@ -12,7 +12,7 @@ El juego, VSync, el monitor, el controlador gráfico o el sistema pueden imponer
 
 ## Compilar
 
-Se necesita Java 21 y Gradle 8.8. Desde la raíz del proyecto, ejecuta:
+Se necesita Java 21 y Gradle 8.10.2 o posterior. Desde la raíz del proyecto, ejecuta:
 
 ```sh
 gradle build

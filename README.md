@@ -12,7 +12,7 @@ The game, VSync, monitor, graphics driver, or operating system may impose additi
 
 ## Building
 
-Java 21 and Gradle 8.8 are required. From the project root, run:
+Java 21 and Gradle 8.10.2 or newer are required. From the project root, run:
 
 ```sh
 gradle build
