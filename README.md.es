@@ -18,7 +18,7 @@ Se necesita Java 21 y Gradle 8.10.2 o posterior. Desde la raíz del proyecto, ej
 gradle build
 ```
 
-El mod compilado aparece en `build/libs/opticore-fabric-1.21.1-1.0.0.jar`. GitHub Actions lo compila automáticamente al subir cambios; descarga el archivo desde **Actions → última ejecución → Artifacts**.
+El mod compilado aparece en `build/libs/opticore-fabric-1.21.1-1.01v.jar`. GitHub Actions lo compila automáticamente al subir cambios; descarga el archivo desde **Actions → última ejecución → Artifacts**.
 
 ## Alcance
 

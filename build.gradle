@@ -2,7 +2,7 @@ plugins {
     id "fabric-loom" version "1.8-SNAPSHOT"
 }
 
-version = "1.0.0"
+version = "1.01v"
 group = "com.opticore"
 
 base {

@@ -33,5 +33,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: opticore-fabric-1.21.1
-          path: build/libs/opticore-fabric-1.21.1-1.0.0.jar
+          path: build/libs/opticore-fabric-1.21.1-1.01v.jar
           if-no-files-found: error

@@ -21,7 +21,7 @@ gradle build
 The compiled mod will be available at:
 
 ```text
-build/libs/opticore-fabric-1.21.1-1.0.0.jar
+build/libs/opticore-fabric-1.21.1-1.01v.jar
 ```
 
 GitHub Actions automatically builds the mod when you push changes. Download the compiled file from **Actions → Latest Run → Artifacts**.
