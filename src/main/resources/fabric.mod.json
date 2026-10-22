@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "opticore",
+  "version": "${version}",
+  "name": "OptiCore",
+  "description": "Selector de límite de FPS para Minecraft 1.21.1.",
+  "authors": ["comparamos"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.opticore.OptiCoreClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
